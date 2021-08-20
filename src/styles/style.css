@@ -6,33 +6,30 @@
 }
 
 h1 {
+  text-align: center;
   margin: 30px 0;
   font-size: 36px;
 }
 
 h2.err-msg {
+  text-align: center;  
   font-weight: normal;
+  font-size: 1.2rem;
   display: none;
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 50px 0;
-  margin: 0 auto;
-  max-width: 800px;
+  padding: 50px 20px;
+  width: 100%;
 }
 
 /* Form */
 
 .form {
   display: grid;
-  grid-template-columns: 400px 100px;
-  grid-template-rows: 30px 100px;
-  column-gap: 10px;
+  grid-template-rows: 1fr 3fr 1fr;
   row-gap: 10px;
-  max-width: 510px;
+  width: 100%;
 }
 
 .input-bar {
@@ -51,10 +48,8 @@ h2.err-msg {
 }
 
 .input-bar.description {
-  grid-column-start: 1;
-  grid-column-end: 3;
   resize: none;
-  font-size: 14px;
+  font-size: 1rem;
   padding-top: 5px;
 }
 
@@ -80,15 +75,16 @@ h2.err-msg {
 }
 
 /* Todo Item */
+.todo-list, .finished-list {
+  width: 100%;
+}
 
 .todo-item, .finished-item {
-  position: relative;
-  width: 800px;
+  width: 100%;
   min-height: 150px;
   border: 2px solid #000000;
   border-radius: 10px;
-  padding: 0 40px;
-  padding-top: 30px;
+  padding: 30px 40px 10px;
   margin-bottom: 20px;
 }
 
@@ -107,25 +103,23 @@ h2.err-msg {
 
 .todo-item .description, .finished-item .description {
   font-size: 14px;
-  margin-bottom: 50px;;
+  margin-bottom: 50px;
   word-wrap: break-word;
 }
 
-.created-date {
-  position: absolute;
-  left: 40px;
-  bottom: 10px;
+.todo-item__footer {
+  width: 100%;
+}
 
+.created-date {
   font-size: 14px;
 }
 
 .check-btn {
-  position: absolute;
-  right: 40px;
-  bottom: 10px;
   color: #ffffff;
   min-width: 44px;
   min-height: 44px;
+  margin: 5px 0;
   border-radius: 50%;
   border: none;
   background-color: #27AE60;
