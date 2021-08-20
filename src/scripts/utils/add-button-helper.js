@@ -47,7 +47,9 @@ class AddButtonHelper {
 
   // Adding todos
   _addBtnHandler({ titleInputBar, descriptionInputBar, container }) {
-    this.btnElm.addEventListener('click', () => {
+    this.btnElm.addEventListener('click', (event) => {
+      event.preventDefault();
+
       const currentTime = TodoData.getCurrentTime();
 
       const todo = {
