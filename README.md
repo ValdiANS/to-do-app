@@ -1,4 +1,5 @@
 # To Do App
+To do app I created using pure javascript. I use Web Storage for store the todo data.
 
 ## How to use
 run `npm install`
