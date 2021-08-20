@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-useless-return */
 import '../styles/style.css';
+import '../styles/responsive.css';
 
 import CONFIG from './global/config';
 import AddButtonHelper from './utils/add-button-helper';
