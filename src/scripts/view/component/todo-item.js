@@ -27,7 +27,7 @@ class TodoItem extends HTMLElement {
         <h2>${this.todo.title}</h2>
         <span class="line"></span>
         <p class="description">
-          ${this.todo.description}
+          ${this._description()}
         </p>
         <p class="created-date">${this.todo.date}</p>
         <button class="check-btn">
@@ -43,7 +43,7 @@ class TodoItem extends HTMLElement {
         <h2>${this.todo.title}</h2>
         <span class="line"></span>
         <p class="description">
-          ${this.todo.description}
+          ${this._description()}
         </p>
         <p class="created-date">${this.todo.date}</p>
       </section>
@@ -82,6 +82,10 @@ class TodoItem extends HTMLElement {
 
     // Rerender error message
     TodoData.errMsg();
+  }
+
+  _description() {
+    return this.todo.description.split('\n').join('<br>');
   }
 }
 
